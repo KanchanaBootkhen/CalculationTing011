@@ -61,24 +61,19 @@ fun calculateTip(amount:Double,tipPercent:Double): String {
 }
 @Composable
 fun EditNumberField(
-    label: Int,
     value: String,
-    onValueChanged: (String) -> Unit,
+    onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier
-){
+) {
     TextField(
         value = value,
         onValueChange = onValueChange,
         singleLine = true,
-        
         label = { Text(stringResource(R.string.bill_amount)) },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         modifier = modifier
     )
 }
-
-
-
 
 @Composable
 fun TipTimeLayout() {
